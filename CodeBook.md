@@ -7,9 +7,9 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The data for the project was downloaded from here:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Explanation on the code variables
+Explanation of the code variables
 -------------------
-First of all, the test files ("subject_test.txt", "X_test.txt" and "y_test.txt") are read (on "stest", "xtest" and "ytest" respectively), and all of them are stored on a data frame, called "allTests" being a 2947x563 data frame
+The test files ("subject_test.txt", "X_test.txt" and "y_test.txt") are read (on "stest", "xtest" and "ytest" respectively), and all of them are stored on a data frame, called "allTests" being a 2947x563 data frame
 Then, the same process is done to the training files "subject_train.txt", "X_train.txt" and "y_train.txt", which are stored on "strain", "xtrain" and "ytrain", and then further combined on "allTrains" data frame (a 7352x563 data frame).
 Following, these 2 data frames ("training" -allTrains- and "testing" -allTests-) are combined to create the data set called "dataSet" (10299x563 dataframe).
 
@@ -26,13 +26,13 @@ The information from the activities is, firstly, stored on the variable "yLabel"
 After these changes have been performed, the number identifying the activity is replaced with the corresponding string.
 By doing this, the activities are easily understandable. The variable containing these names is "activityLabel"
 
-Here some more transformations take place. In this case I removed these characters from the variable names: "-" "," "(" ")", also capitalizing "Mean" and "Std".
+Here some more transformations take place. Removed these characters from the variable names: "-" "," "(" ")", also capitalizing "Mean" and "Std".
 A subjects data frame is created (variable "subjects"), where the train and test subjects are stored
-The data frame containing the subjects information ("subjects"), is combined with the data frame containing the activity information ("yLabel"), is also combined with the mean and std information data frame ("meanAndStdData") to generate a "clean" dataset ( stored in the variable "cleanedData").
+The data frame containing the subjects information ("subjects"), is combined with the data frame containing the activity information ("yLabel"), is also combined with the mean and std information data frame ("meanAndStdData") to generate a "clean" dataset ( stored in the variable "clean_Data").
 This clean data is used to generate the file "clean_Data.txt", that contains the information from "clean_Data" variable. 
 
 The data from the clean data set ("clean_Data") is aggregated by activity and subject, outputting the mean grouped by these variables. The data frame containing this information is stored in the variable called "tidy_Data"
-This tidyData variable is used to generate the file "tidy_Data.txt", that contains the information from "tidy_Data" variable. 
+This tidy_Data variable is used to generate the file "tidy_Data.txt", that contains the information from "tidy_Data" variable. 
 
 Explanation of the column names within "tidy_Data.txt" file
 -------------------
