@@ -1,6 +1,6 @@
 ############################################################
 ##'Getting and Cleaning Data' 
-## copyright @Sandeep
+## copyright @sandychemin
 ## for more information see README.md and CodeBook.md
 ############################################################
 
